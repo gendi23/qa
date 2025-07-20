@@ -16,7 +16,7 @@ function isValidEmail(email) {
 }
 
 // POST /api/users - Crear usuario
-app.post('/api/users', (req, res) => {
+app.post('https://qa--genesisda51.repl.co/api/users', (req, res) => {
     const { name, email, age } = req.body;
 
     // Validar campos requeridos
@@ -66,7 +66,7 @@ app.post('/api/users', (req, res) => {
 });
 
 // GET /api/users/:id - Obtener usuario por ID
-app.get('/api/users/:id', (req, res) => {
+app.get('https://qa--genesisda51.repl.co/api/users/:id', (req, res) => {
     const { id } = req.params;
 
     // Validar que ID sea numérico
@@ -92,7 +92,7 @@ app.get('/api/users/:id', (req, res) => {
 });
 
 // GET /api/users - Obtener todos los usuarios (bonus para testing)
-app.get('/api/users', (req, res) => {
+app.get('https://qa--genesisda51.repl.co/api/users', (req, res) => {
     res.status(200).json({
         users: users,
         total: users.length
